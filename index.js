@@ -1,6 +1,10 @@
+const gameOfThronesApi = "https://anapioficeandfire.com/api/books"
+
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
-  
+  return fetch(gameOfThronesApi)
+    .then(resp => resp.json())
+    .then(books => renderBooks(books))
 }
 
 function renderBooks(books) {
